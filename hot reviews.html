@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/HOT/my.css">
+	<link rel="stylesheet" href="./css/HOT/bootstrap.css">
+	<!-- nav导航栏 -->
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<script src="./js/jquery-3.7.1.min.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		body {
+			background-image: url(./img/HOT-IMG/back.zhifeiji.jpg);
+			background: rgba(red, green, blue, alpha);
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.comment-card {
+			float: left;
+		}
+
+		.commentList {
+			list-style-type: none;
+		}
+
+		/* 鼠标悬停在链接上时改变颜色 */
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 导航栏 -->
+	<nav class="navbar navbar-expand-sm navbar-dark fixed-top ">
+		<a class="navbar-brand" href=" " style="color: black;">登录</a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"><span
+				class="navbar-toggler-icon"></span></button>
+		<div class="navbar-nav collapse navbar-collapse" id="navbarCollapse">
+			<a class="nav-item nav-link active" href="./index.html" style="color: black;">首页</a>
+			<a class="nav-item nav-link active" href="./About_us.html" style="color: black;">关于我们</a>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: black;">联系我们</a>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item">电子邮箱:123@qq.com/163.com</a>
+					<a href="#" class="dropdown-item">微信:123xxx</a>
+					<a href="#" class="dropdown-item">QQ:123xxx</a>
+					<a href="#" class="dropdown-item">电话号码:123xxx</a>
+				</div>
+			</li>
+			<a class="nav-item nav-link" href="./Com_Zone.html" style="color: black;">交流论坛</a>
+			<a class="nav-item nav-link" href="./Music-selection.html" style="color: black;">音乐精选</a>
+			<a class="nav-item nav-link" href="./hot reviews.html" style="color: black;">音乐热评</a>
+			<a class="nav-item nav-link" href="./music list.html" style="color: black;">音乐榜单</a>
+			<a class="nav-item nav-link" href="./index.html" style="color: black;">反馈</a>
+		</div>
+		<form class="form-inline">
+			<input class="form-control mr-sm-2 mt-sm-1 ml-sm-4" type="text" placeholder="搜索">
+			<button class="btn btn-light" type="submit">搜索</button>
+		</form>
+	</nav>
+
+	<!-- 导航栏结束 -->
+	<div id="music-hot-comments">
+		<!-- 评论卡片 -->
+		<div class="comment-card mt-5">
+			<div class="comment-header">
+				<h3 class="text-secend">《想想就烦（1v1的爱情为何成为奢侈品）》<sub>-Mikey-18/缪礼丞/Seven李百万</sub></h3>
+			</div>
+			<div class="comment-content">
+				<h5 class="text mr-2">“逢人炫耀的玫瑰，枯萎了又该如何收场” <p><small>-by 绉邵慈</small> </p>
+				</h5>
+				<span><small><sub>ip</sub> 北京 昨天21:57 iPhone15Promax<i class="bi bi-apple"></i></small></span>
+				<textarea class="commentInput " style="height: 35px;"></textarea>
+				<button onclick="addComment(this)" class="btn btn-outline text-secend form-group"><i
+						class="bi bi-fire">评论</i></button>
+				<!-- 评论列表 -->
+				<ul class="commentList list">
+					<li><i class="bi bi-chat-square-heart"></i>人和人的悲欢并不相通</li>
+				</ul>
+				<button class="btn btn-outline" onclick="like(this)"><sub><span class="text text-secend"><i
+								class="bi bi-hand-thumbs-up-fill"></i></span></sub></button>
+				<span class="likeCount">237 </span><i>赞过</i>
+				<img src="./img/HOT-IMG/love.png" width="19px" height="19px">
+			</div>
+		</div>
+
+		<div class="comment-card mt-5">
+			<div class="comment-header">
+				<h3 class="text-secend">《海街寺庙》<sub>-吴垚滔</sub></h3>
+			</div>
+			<div class="comment-content">
+				<h4 class="text mr-2">放轻松 就当做个梦 <p><small>-by 尤野信子</small> </p>
+				</h4>
+				<span><small><sub>ip</sub> 广西 昨天21:00 Android</small></span>
+				<textarea class="commentInput " style="height: 35px;"></textarea>
+				<button onclick="addComment(this)" class="btn btn-outline text-secend form-group"><i
+						class="bi bi-fire">评论</i></button>
+				<!-- 评论列表 -->
+				<ul class="commentList list">
+					<li><i class="bi bi-chat-square-heart"></i>人和人的悲欢并不相通</li>
+				</ul>
+				<button class="btn btn-outline" onclick="like(this)"><sub><span class="text text-secend"><i
+								class="bi bi-hand-thumbs-up-fill"></i></span></sub></button>
+				<span class="likeCount">237 </span><i>赞过</i>
+				<img src="./img/HOT-IMG/love.png" width="19px" height="19px">
+			</div>
+		</div>
+		<div class="comment-card mt-5">
+			<div class="comment-header">
+				<h3 class="text-secend">《漠河舞厅·2022》<sub>-柳爽</sub></h3>
+			</div>
+			<div class="comment-content">
+				<h4 class="text mr-2">“人类用什么衡量爱”“用分开后的痛苦” <p><small>-by 听闻里里</small> </p>
+				</h4>
+				<span><small><sub>ip</sub> 未知 昨天21:00 手机端</small></span>
+				<textarea class="commentInput " style="height: 35px;"></textarea>
+				<button onclick="addComment(this)" class="btn btn-outline text-secend form-group"><i
+						class="bi bi-fire">评论</i></button>
+				<!-- 评论列表 -->
+				<ul class="commentList list">
+					<li><i class="bi bi-chat-square-heart"></i>人和人的悲欢并不相通</li>
+				</ul>
+				<button class="btn btn-outline" onclick="like(this)"><sub><span class="text text-secend"><i
+								class="bi bi-hand-thumbs-up-fill"></i></span></sub></button>
+				<span class="likeCount">237 </span><i>赞过</i>
+				<img src="./img/HOT-IMG/love.png" width="19px" height="19px">
+			</div>
+		</div>
+		<div class="comment-card mt-5">
+			<div class="comment-header">
+				<h3 class="text-secend">《再见，再见》<sub>-逃跑计划</sub></h3>
+			</div>
+			<div class="comment-content">
+				<h4 class="text mr-2">每句【再见】都是【别走】 <p><small>-by ISYXING</small> </p>
+				</h4>
+				<span><small><sub>ip</sub> 未知 昨天21:00 手机端</small></span>
+				<textarea class="commentInput " style="height: 35px;"></textarea>
+				<button onclick="addComment(this)" class="btn btn-outline text-secend form-group"><i
+						class="bi bi-fire">评论</i></button>
+				<!-- 评论列表 -->
+				<ul class="commentList list">
+					<li><i class="bi bi-chat-square-heart"></i>人和人的悲欢并不相通</li>
+				</ul>
+				<button class="btn btn-outline" onclick="like(this)"><sub><span class="text text-secend"><i
+								class="bi bi-hand-thumbs-up-fill"></i></span></sub></button>
+				<span class="likeCount">237 </span><i>赞过</i>
+				<img src="./img/HOT-IMG/love.png" width="19px" height="19px">
+			</div>
+		</div>
+		<div class="comment-card mt-5">
+			<div class="comment-header">
+				<h3 class="text-secend">《当爱在靠近》<sub>-烟（许佳豪）</sub></h3>
+			</div>
+			<div class="comment-content">
+				<h4 class="text mr-2">我们终其一生，不过是想找个能够一起吃饭的人 <p><small>-by 我在沉淀</small> </p>
+				</h4>
+				<span><small><sub>ip</sub> 未知 2022-11-22 手机端</small></span>
+				<textarea class="commentInput " style="height: 35px;"></textarea>
+				<button onclick="addComment(this)" class="btn btn-outline text-secend form-group"><i
+						class="bi bi-fire">评论</i></button>
+				<!-- 评论列表 -->
+				<ul class="commentList list">
+					<li><i class="bi bi-chat-square-heart"></i>人和人的悲欢并不相通</li>
+				</ul>
+				<button class="btn btn-outline" onclick="like(this)"><sub><span class="text text-secend"><i
+								class="bi bi-hand-thumbs-up-fill"></i></span></sub></button>
+				<span class="likeCount">237 </span><i>赞过</i>
+				<img src="./img/HOT-IMG/love.png" width="19px" height="19px">
+			</div>
+		</div>
+		<div class="comment-card mt-5">
+			<div class="comment-header">
+				<h3 class="text-secend">《H.》<sub>-李子豪</sub></h3>
+			</div>
+			<div class="comment-content">
+				<h4 class="text mr-2">可惜的是我们都没有上帝视角，都看不到对方为彼此的付出，所以我们的心里都不平衡 <p><small>-by 湫似</small> </p>
+				</h4>
+				<span><small><sub>ip</sub> 未知 2022-10-04 手机端</small></span>
+				<textarea class="commentInput " style="height: 35px;"></textarea>
+				<button onclick="addComment(this)" class="btn btn-outline text-secend form-group"><i
+						class="bi bi-fire">评论</i></button>
+				<!-- 评论列表 -->
+				<ul class="commentList list">
+					<li><i class="bi bi-chat-square-heart"></i>人和人的悲欢并不相通</li>
+				</ul>
+				<button class="btn btn-outline" onclick="like(this)"><sub><span class="text text-secend"><i
+								class="bi bi-hand-thumbs-up-fill"></i></span></sub></button>
+				<span class="likeCount">237 </span><i>赞过</i>
+				<img src="./img/HOT-IMG/love.png" width="19px" height="19px">
+			</div>
+		</div>
+		<div class="comment-card mt-5">
+			<div class="comment-header">
+				<h3 class="text-secend">《雪 Distance》<sub>-capper/罗言</sub></h3>
+			</div>
+			<div class="comment-content">
+				<h4 class="text mr-2">“我们不是干净的朋友，也不是敞亮的恋人” <p><small>-by 郭珂a</small> </p>
+				</h4>
+				<span><small><sub>ip</sub> 河南 2023-03-11 手机端</small></span>
+				<textarea class="commentInput " style="height: 35px;"></textarea>
+				<button onclick="addComment(this)" class="btn btn-outline text-secend form-group"><i
+						class="bi bi-fire">评论</i></button>
+				<!-- 评论列表 -->
+				<ul class="commentList list">
+					<li><i class="bi bi-chat-square-heart"></i>人和人的悲欢并不相通</li>
+				</ul>
+				<button class="btn btn-outline" onclick="like(this)"><sub><span class="text text-secend"><i
+								class="bi bi-hand-thumbs-up-fill"></i></span></sub></button>
+				<span class="likeCount">237 </span><i>赞过</i>
+				<img src="./img/HOT-IMG/love.png" width="19px" height="19px">
+			</div>
+		</div>
+		<div class="comment-card ">
+			<div class="comment-header">
+				<h3 class="text-secend">《断线》<sub>-Shang/lil/sophy</sub></h3>
+			</div>
+			<div class="comment-content">
+				<h4 class="text mr-2">“在你之后，我没有拿得出手的痛苦”<p><small>-by peak-end</small> </p>
+				</h4>
+				<span><small><sub>ip</sub> 未知 2017-10-22 手机端<i class="bi bi-apple"></i></small></span>
+				<textarea class="commentInput " style="height: 35px;"></textarea>
+				<button onclick="addComment(this)" class="btn btn-outline text-secend form-group"><i
+						class="bi bi-fire">评论</i></button>
+				<!-- 评论列表 -->
+				<ul class="commentList list">
+					<li><i class="bi bi-chat-square-heart"></i>“在你之前，我没有一件像样的心事”</li>
+				</ul>
+				<button class="btn btn-outline" onclick="like(this)"><sub><span class="text text-secend"><i
+								class="bi bi-hand-thumbs-up-fill"></i></span></sub></button>
+				<span class="likeCount">520 </span><i>赞过</i>
+				<img src="./img/HOT-IMG/love.png" width="19px" height="19px">
+			</div>
+		</div>
+		<div class="comment-card mt">
+			<div class="comment-header">
+				<h3 class="text-secend">《那里都是你2.0》<sub>-队长</sub></h3>
+			</div>
+			<div class="comment-content">
+				<h5 class="text mr-2">我这个人特别没有毅力 所以连放弃也总是狠不下心<p><small>-by 队长</small> </p>
+				</h5>
+				<span><small><sub>ip</sub> 未知 2019-05-07 手机端<i class="bi bi-apple"></i></small></span>
+				<textarea class="commentInput " style="height: 35px;"></textarea>
+				<button onclick="addComment(this)" class="btn btn-outline text-secend form-group"><i
+						class="bi bi-fire">评论</i></button>
+				<!-- 评论列表 -->
+				<ul class="commentList list">
+					<li><i class="bi bi-chat-square-heart"></i>你走过的地方只剩下思念难捱</li>
+				</ul>
+				<button class="btn btn-outline" onclick="like(this)"><sub><span class="text text-secend"><i
+								class="bi bi-hand-thumbs-up-fill"></i></span></sub></button>
+				<span class="likeCount">520 </span><i>赞过</i>
+				<img src="./img/HOT-IMG/love.png" width="19px" height="19px">
+			</div>
+		</div>
+
+		<!-- 更多的评论卡片 -->
+	</div>
+	<img src="">
+	<script type="text/javascript" src="./js/HOT-READ/buffermove1.js"></script>
+	<script type="text/javascript">
+		//this绑定的属性可以在整个构造函数内部都可以使用，而变量只能在函数内部使用。
+		function Fireworks(x, y) {//x,y鼠标的位置
+			this.x = x;
+			this.y = y;
+			var that = this;
+			//1.创建烟花。
+			this.ceratefirework = function () {
+				this.firework = document.createElement('div');//整个构造函数内部都可以使用
+				this.firework.style.cssText = `width:5px;height:5px;background:#fff;position:absolute;left:${this.x}px;top:${document.documentElement.clientHeight}px;`;
+				document.body.appendChild(this.firework);
+				this.fireworkmove();
+			};
+			//2.烟花运动和消失
+			this.fireworkmove = function () {
+				buffermove(this.firework, { top: this.y }, function () {
+					document.body.removeChild(that.firework);//烟花消失，碎片产生
+					that.fireworkfragment();
+				});
+			};
+			//3.创建烟花的碎片
+			this.fireworkfragment = function () {
+				var num = this.ranNum(30, 60);//盒子的个数
+				this.perRadio = 2 * Math.PI / num;//弧度
+				for (var i = 0; i < num; i++) {
+					this.fragment = document.createElement('div');
+					this.fragment.style.cssText = `width:5px;height:5px;background:rgb(${this.ranNum(0, 255)},${this.ranNum(0, 255)},${this.ranNum(0, 255)});position:absolute;left:${this.x}px;top:${this.y}px;`;
+					document.body.appendChild(this.fragment);
+					this.fireworkboom(this.fragment, i);//将当前创建的碎片传过去，方便运动和删除
+				}
+			}
+
+
+
+			//x=16*Math.pow(sint,3);  //Math.sin(perRadio*i)
+			//y=13Cost-5*Cos2t-2*Cos3t-Cos4t
+			//4.碎片运动
+			this.fireworkboom = function (obj, i) {//obj:创建的碎片
+				var r = 0.1;
+				obj.timer = setInterval(function () {//一个盒子运动
+					r += 0.4;
+					if (r >= 10) {
+						clearInterval(obj.timer);
+						document.body.removeChild(obj);
+					}
+					obj.style.left = that.x + 16 * Math.pow(Math.sin(that.perRadio * i), 3) * r + 'px';
+					obj.style.top = that.y - (13 * Math.cos(that.perRadio * i) - 5 * Math.cos(2 * that.perRadio * i) - 2 * Math.cos(3 * that.perRadio * i) - Math.cos(4 * that.perRadio * i)) * r + 'px';
+				}, 20);
+
+			}
+
+			//随机方法
+			this.ranNum = function (min, max) {
+				return Math.round(Math.random() * (max - min)) + min;
+			};
+		}
+
+
+		document.onclick = function (ev) {
+			var ev = ev || window.event;
+			new Fireworks(ev.clientX, ev.clientY).ceratefirework();
+		}
+		function like(button) {
+			let likeSpan = button.nextElementSibling;
+			let likeCount = parseInt(likeSpan.innerText);
+			likeCount++;
+			likeSpan.innerText = likeCount.toString();
+		}
+		function addComment(button) {
+			let commentInput = button.previousElementSibling;
+			let commentList = button.nextElementSibling;
+
+			// 创建新的评论条目
+			let newComment = document.createElement("li");
+			newComment.innerText = commentInput.value;
+
+			// 添加新的评论到评论列表
+			commentList.appendChild(newComment);
+
+			// 清空输入框
+			commentInput.value = '';
+		}
+	</script>
+
+</body>
+
+</html>

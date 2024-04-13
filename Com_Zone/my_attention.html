@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的关注</title>
+    <link rel="stylesheet" href="../css/Com_Zone/Jiao_Liu.css">
+    <!-- nav导航栏 -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <style>
+        body {
+            background-image: url(../img/img_Com_Zone/img_Pin_Lun/A-beijing.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bk-dark">
+        <a class="navbar-brand" href="../login.html">登录</a>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="../Com_Zone.html">交流互动区</a>
+        </div>
+    </nav>
+    <!-- 导航栏结束 -->
+    <!-- 评论区 -->
+    <h2 style="margin-left: 250px; font-weight: bold; color: rgb(94, 9, 94);" class="fixed-top">我的关注</h2>
+    <div class="comments_wrapper">
+        <!-- 官方的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/2-guanfang.png" alt="用户1头像">
+                <p class="username" style="color: red">音乐论坛官方&nbsp;&nbsp;<img
+                        src="../img/img_Com_Zone/img_Pin_Lun/G-renzhen.png" title="官方认证"
+                        style="width: 19px; height: 19px;">&nbsp;<img src="../img/img_Com_Zone/img_Pin_Lun/D-vip.png"
+                        title="尊贵的大爹" style="width: 19px; height: 19px;">&nbsp;<img
+                        src="../img/img_Com_Zone/img_Pin_Lun/E-zuanshi.png" title="绿钻用户"
+                        style="width: 19px; height: 19px;"></p>
+            </div>
+
+            <div class="content mt-3">
+                <p style="color: gold;">关注我们,送三天VIP</p>
+                <!-- <img src="../img/img_Com_Zone/img_Pin_Lun/1-liu.jpg"> -->
+                <!-- <video controls>
+                    <source src="../Video/" type="video/mp4">
+                </video>  -->
+                <br>
+
+                &nbsp; &nbsp;<span><small>今天12:00 · 冰岛 &nbsp;华为Mate60Pro</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">2077</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+        <!-- wo的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/7-wo.jpg" alt="用户1头像">
+                <p class="username">宇智波六花&nbsp;&nbsp;<img src="../img/img_Com_Zone/img_Pin_Lun/D-vip.png" title="尊贵的大爹"
+                        style="width: 19px; height: 19px;">&nbsp;<img
+                        src="../img/img_Com_Zone/img_Pin_Lun/E-zuanshi.png" title="绿钻用户"
+                        style="width: 19px; height: 19px;"></p>
+            </div>
+
+            <div class="content mt-3">
+                <p>对！这个页面哥做的，我爱说实话铁铁</p>
+                <img src="../img/img_Com_Zone/img_Pin_Lun/6-long1.jpg" width="70%">
+                <!-- <video controls>
+                    <source src="../Video/" type="video/mp4">
+                </video>  -->
+                <br>
+
+                &nbsp; &nbsp;<span><small>今天10:00 · 桂林电子科技大学 &nbsp;廉价低仿的OPPO R9s(照亮你的美)</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">520</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+
+
+        <!-- liu的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/1-liu.jpg" alt="用户1头像">
+                <p class="username">念慈</p>
+            </div>
+
+            <div class="content mt-3">
+                <p>成为了你的喜欢，心里却还是不甘</p>
+                <!-- <img src="../img/img_Com_Zone/img_Pin_Lun/1-liu.jpg"> -->
+                <video controls width="70%">
+                    <source src="../Video/2-liu.mp4" type="video/mp4">
+                </video>
+                <br>
+
+                &nbsp; &nbsp;<span><small>今天6:00 · 上海 &nbsp;iPhone 15Promax</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">72</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+        <!-- ye的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/3-ye.jpg" alt="用户1头像">
+                <p class="username">XO.ox浪</p>
+            </div>
+
+            <div class="content mt-3">
+                <p>“跟心上人喝酒可省钱，唠的每句嗑都是下酒菜”</p>
+                <!-- <img src="../img/img_Com_Zone/img_Pin_Lun/1-liu.jpg"> -->
+                <video controls style="width: 70%;">
+                    <source src="../Video/1-ye.mp4" type="video/mp4">
+                </video>
+                <br>
+
+                &nbsp; &nbsp;<span><small>今天0:00 · 上海 &nbsp;iPhone 15Promax</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">66</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+        <!-- gan的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/8-gan.jpg" alt="用户1头像">
+                <p class="username">一茶</p>
+            </div>
+
+            <div class="content mt-3">
+                <p>高楼林立晚霞披，璀璨霓虹映长空。</p>
+                <img src="../img/img_Com_Zone/img_Pin_Lun/F-gan.jpg" style="width: 70%;">
+                <!-- <video controls>
+                    <source src="../Video/" type="video/mp4">
+                </video>  -->
+                <br>
+
+                &nbsp; &nbsp;<span><small>昨天17:00 · 北京 &nbsp;Huawei Mate 6000 Pro(宇宙版)</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">40</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+        <!-- lt的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/11-lt.jpg" alt="用户1头像">
+                <p class="username">半夜汽笛</p>
+            </div>
+
+            <div class="content mt-3">
+                <p>喜欢海，喜欢花，喜欢日出和日落，浪漫的年纪别活得太无趣</p>
+                <!-- <img src="../img/img_Com_Zone/img_Pin_Lun/10-bh.jpg" style="width: 70%;"> -->
+                <video controls width="70%">
+                    <source src="../Video/3-lt.mp4" type="video/mp4">
+                </video>
+                <br>
+
+                &nbsp; &nbsp;<span><small>凌晨5:20 · 珠穆朗玛峰 &nbsp;大哥的Xiaomi 18(钛合金版)</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">520</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+        <!-- bh的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/H-bh.jpg" alt="用户1头像">
+                <p class="username">仅我可见</p>
+            </div>
+
+            <div class="content mt-3">
+                <p>日落时Kiss</p>
+                <img src="../img/img_Com_Zone/img_Pin_Lun/10-bh.jpg" style="width: 70%;">
+                <!-- <video controls>
+                    <source src="../Video/" type="video/mp4">
+                </video>  -->
+                <br>
+
+                &nbsp; &nbsp;<span><small>昨天8:10 · 北京 &nbsp;Xiaomi 14 Pro</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">520</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+        <!-- kunkun的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/9-kunkun.jpg" alt="用户1头像">
+                <p class="username">坤坤</p>
+            </div>
+
+            <div class="content mt-3">
+                <p>我家鸽鸽怎么你了</p>
+                <!-- <img src="../img/img_Com_Zone/img_Pin_Lun/1-liu.jpg"> -->
+                <!-- <video controls>
+                    <source src="../Video/" type="video/mp4">
+                </video>  -->
+                <br>
+
+                &nbsp; &nbsp;<span><small>昨天23:00 · 广西 &nbsp;vivo X100 Pro</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">32</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+        <!-- cui的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/1-cui.jpg" alt="用户1头像">
+                <p class="username">崔佛Trev</p>
+            </div>
+
+            <div class="content mt-3">
+                <p>Three people and one dog</p>
+                <!-- <img src="../img/img_Com_Zone/img_Pin_Lun/1-liu.jpg"> -->
+                <!-- <video controls>
+                    <source src="../Video/" type="video/mp4">
+                </video>  -->
+                <br>
+
+                &nbsp; &nbsp;<span><small>凌晨4:00 · Luo Shengdu(洛圣都) &nbsp;iPhone 6s</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">84</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+        <!-- zhen的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/4-niu.jpg" alt="用户1头像">
+                <p class="username">我不吃牛肉</p>
+            </div>
+
+            <div class="content mt-3">
+                <p>看给孩子乐的🤣</p>
+                <img src="../img/img_Com_Zone/img_Pin_Lun/C-zhen.jpg" style="width: 70%;">
+                <!-- <video controls>
+                    <source src="../Video/" type="video/mp4">
+                </video>  -->
+                <br>
+
+                &nbsp; &nbsp;<span><small>昨天12:10 · 肯德基(万达店) &nbsp;Xiaomi 14</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">24</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+        <!-- coke的评论区 -->
+        <div class="comment aaa">
+            <div class="user">
+                <img class="avatar" src="../img/img_Com_Zone/img_Pin_Lun/5-coke.jpg" alt="用户1头像">
+                <p class="username">co捞湿</p>
+            </div>
+
+            <div class="content mt-3">
+                <p>捞地！</p>
+                <img src="../img/img_Com_Zone/img_Pin_Lun/2-coke.jpg" width="70%">
+                <!-- <video controls>
+                    <source src="../Video/" type="video/mp4">
+                </video>  -->
+                <br>
+
+                &nbsp; &nbsp;<span><small>昨天12:10 · 湖南 &nbsp;Huawei P50</small></span>
+            </div>
+            <br>
+            <!-- 点赞和评论按钮 -->
+            <button onclick="like(this)">赞</button>
+            <span class="likeCount">73</span>
+            <img src="../img/img_Com_Zone/img_Pin_Lun/B-dianzan.png " width="19px" height="19px">
+
+            <textarea class="commentInput"></textarea>
+            <button onclick="addComment(this)">评论</button>
+            <!-- 评论列表 -->
+            <ul class="commentList list">
+
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            function like(button) {
+                let likeSpan = button.nextElementSibling;
+                let likeCount = parseInt(likeSpan.innerText);
+                likeCount++;
+                likeSpan.innerText = likeCount.toString();
+            }
+
+            function addComment(button) {
+                let commentInput = button.previousElementSibling;
+                let commentList = button.nextElementSibling;
+
+                // 创建新的评论条目
+                let newComment = document.createElement("li");
+                newComment.innerText = commentInput.value;
+
+                // 添加新的评论到评论列表
+                commentList.appendChild(newComment);
+
+                // 清空输入框
+                commentInput.value = '';
+            }
+        </script>
+
+</body>
+
+</html>

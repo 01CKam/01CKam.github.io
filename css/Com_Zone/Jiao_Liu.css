@@ -1,0 +1,166 @@
+/* 评论区：高级版 */
+.comments_wrapper {
+    width: 33%; /* 让评论区占用屏幕的三分之一 */
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url();
+}
+/* 彩虹渐变边框 */
+.aaa {
+   
+        /* 边框 */
+        border: 2px solid transparent;
+        border-image-source: linear-gradient(90deg, #f00, #ff0, #0f0, #0ff, #00f, #f0f);
+        border-image-slice: 1;
+      
+        /* 动画 */
+        animation: rainbow-border-animation 3s infinite;
+      }
+      
+      @keyframes rainbow-border-animation {
+        0% {
+          border-image-source: linear-gradient(90deg, #f00, #ff0, #0f0, #0ff, #00f, #f0f);
+        }
+        25% {
+          border-image-source: linear-gradient(90deg, #ff0, #0f0, #0ff, #f0f, #00f, #f00);
+        }
+        50% {
+          border-image-source: linear-gradient(90deg, #0f0, #0ff, #f0f, #00f, #f00, #ff0);
+        }
+        75% {
+          border-image-source: linear-gradient(90deg, #0ff, #f0f, #00f, #f00, #ff0, #0f0);
+        }
+        100% {
+          border-image-source: linear-gradient(90deg, #f0f, #00f, #f00, #ff0, #0f0, #0ff);
+        }
+      
+}
+.comment {
+    margin: 10px;
+    padding: 10px;
+    background-image: url();
+   
+}
+.username {
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+}
+.avatar {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+.content img, .content video {
+    max-width: 100%;
+    height: auto;
+}
+.commentInput{
+    width: 200px;
+    height: 19px;
+    right: 5px; 
+}
+.submit-button {
+    position: absolute;
+    right: 1px; 
+}
+
+/* 流光 */
+button{
+
+    position: relative;
+
+    display: inline-block;
+
+    width: 60px;
+
+    height: 30px;
+
+    background-color: skyblue;
+
+    color: #fff;
+
+    line-height: 60px;
+
+    text-align: center;
+
+}
+
+button{
+
+    text-decoration: none;
+
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+
+    background-size: 400%;
+
+    border-radius: 10px;
+
+}
+
+@keyframes animate{
+
+    0%{
+
+        background-position: 0 0;
+
+    }
+
+    100%{
+
+        background-position: 400% 0;
+
+    }
+
+}
+
+button:hover{
+
+    animation: animate 8s linear infinite;
+
+}
+
+button:before{
+
+    content: ''
+
+    position：absolute;
+
+    left:-5px;
+
+    top:-5px;
+
+    right: -5px;
+
+    bottom: -5px;
+
+    z-index: -1;
+
+}
+
+button:before{
+
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+
+    background-size: 400%;
+
+    border-radius: 10px;
+
+}
+
+button:before{
+
+    opacity: 0;
+
+    transition: all 1s;
+
+}
+
+button:hover:before{
+
+    filter:blur(20px);
+
+    opacity: 1;
+
+}

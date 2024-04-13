@@ -1,0 +1,52 @@
+body {
+    /* 背景渐变 */
+    background-image: linear-gradient(to right,
+            #f0b5cf 0%,
+            #b7b5ff 100%);
+}
+.aa{
+    position: relative;
+    perspective: 1600px;
+    top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b{
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: a 8s infinite cubic-bezier(.7,0,.17,1);
+}
+.b div{
+    position: absolute;
+    background-size: cover;
+    opacity: .9;
+    width: 400px;
+    height: 250px;
+    transform: rotateY(calc(var(--i)*120deg)) translateZ(600px);
+}
+@keyframes a{
+    0%{
+        transform: translateZ(-100px) rotateY(0);
+    }
+    33%{
+        transform: translateZ(-100px) rotateY(-120deg);
+    }
+    66%{
+        transform: translateZ(-100px) rotateY(-240deg);
+    }
+    100%{
+        transform: translateZ(-100px) rotateY(-360deg);
+    }
+}
+.c{
+    background-image: url("../Com_Zone/5-zhou.jpg");
+}
+.d{
+    background-image: url("../Com_Zone/3-qian.jpg");
+}
+.e{
+    background-image: url("../Com_Zone/1-Alan.jpg");
+}
