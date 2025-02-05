@@ -1,214 +1,275 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <!-- 基础信息 -->
-    <meta charset="utf-8">
-    <meta name="renderer" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="force-rendering" content="webkit" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=peace>
-    <meta name="keywords" content="peace多,个人主页">
-    <meta name="author" content="peace多">
-    <title>个人主页</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
-    <link rel="apple-touch-icon" href="./images/beijing.png">
-    <link rel="icon" href="./favicon.ico">
-    <!--引入SweetAlert
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
-    <!--引入izitoast-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
-    <!--引入fontawesome-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css"
-        media="all">
-    <!--百度站长平台-->
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?14e9f35ff8bc67fd4bcb5f07a6e6655a";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    <!--IE淘汰计划-->
-    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href = "https://imsyy.top/upgrade-your-browser/index.html?referrer=" + encodeURIComponent(window.location.href);</script>
-    
-   
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>01CKam的导航页</title>
+	<link rel="icon" href="./static/img/fav.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="./static/css/style.css">
+	<link rel="stylesheet" href="./static/css/root.css">
+	<!-- Music -->
+	<link rel="stylesheet" href="http://main.ckam.xyz:2023/MusicAPI/APlayer.min.css ">
+	<script src="http://main.ckam.xyz:2023/MusicAPI/APlayer.min.js"></script>
+	<script src="http://main.ckam.xyz:2023/MusicAPI/Meting.min.js"></script>
+
+
 </head>
 
-<body oncontextmenu=self.event.returnValue=false onselectstart="return false">
-    <!--<span class="mobile btn-mobile-menu">
-        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
-        <i class="social iconfont icon-ngleup btn-mobile-close__icon hidden"></i>
-    </span>-->
-    <header id="panel" class="panel-cover">
-        <div class="panel-main">
-            <div class="panel-main__inner panel-inverted">
-                <div class="panel-main__content">
-                    <div class="ih-item circle effect right_to_left">
-                        <a class="blog-button">
-                            <div class="img"><img src="./images/logo.png" alt="img" class="js-avatar iUp profilepic">
-                            </div>
-                            <div class="info iUp">
-                                <div class="info-back">
-                                    <h2>Fighting</h2>
-                                    <p>2022 · 努力中</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <h1 class="panel-cover__title panel-title iUp">
-                        <br />hello
-                    </h1>
-                    <p class="panel-cover__subtitle panel-subtitle iUp">Welcome to my website</p>
-                    <hr class="panel-cover__divider iUp" />
-                    <!--一言无法显示时的文字-->
-                    <p id="description" class="panel-cover__description iUp">每一个人都应该明确自己的方向和位置
-                        <br />
-                        <strong>-「peace多」</strong>
-                    </p>
-                    <div class="navigation-wrapper iUp">
-                        <div>
-                            <nav class="cover-navigation cover-navigation--primary">
-                                <ul class="navigation">
-                                    <li class="navigation__item">
-                                        <a href="https://www.46yun.com/" target="_blank" class="blog-button">
-                                            <div>46云服务器</div>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <!--<a onclick="update()" class="blog-button">-->
-                                        <a href="https://www.46yun.com/" target="_blank" class="blog-button">
-                                            <div>网盘</div>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://www.46yun.com/" target="_blank" class="blog-button">
-                                            <div>导航</div>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://www.46yun.com/" target="_blank" class="blog-button">
-                                            <div>战力查询</div>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="链接地址" class="blog-button">
-                                            <div>点击加群</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="iUp">
-                            <nav class="cover-navigation navigation--social">
-                                <ul class="navigation">
+<body>
+	<div id="ckam-loading">
+		<div id="ckam-loading-center">
+		</div>
+	</div>
+	<div class="ckam-filter"></div>
 
-                                    <li class="navigation__item">
-                                        <a href="" title="Github" target="_blank">
-                                            <i class="fas fa-code-branch"></i>
-                                            <span class="label">Github</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="/" title="Telegram" target="_blank">
-                                            <i class="fab fa-telegram-plane"></i>
-                                            <span class="label">Telegram</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="/" title="Twitter" target="_blank">
-                                            <i class="fab fa-twitter"></i>
-                                            <span class="label">Twitter</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="http://wpa.qq.com/msgrd?v=3&uin=123456&site=qq&menu=yes
-"title="QQ"
-                                            target="_blank">
-                                            <i class="fab fa-qq"></i>
-                                            <span class="label">QQ</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a onclick="weixin()" title="微信" target="_blank">
-                                            <i class="fab fa-weixin"></i>
-                                            <script>
-                                                function weixin() {
-                                                    Swal.fire({
-                                                        title: "请扫码",
-                                                        text: "请使用微信扫一扫",
-                                                        confirmButtonText: "好的",
-                                                        imageUrl: "./images/weixin.png",
-                                                        imageWidth: 150,
-                                                        imageHeight: 150
-                                                    })
-                                                }
-                                            </script>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="/" title="Email">
-                                            <i class="fas fa-envelope"></i>
-                                            <span class="label">Email</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-cover--overlay cover-slate"></div>
-        </div>
-        <div class="remark iUp">
-            <p class="power">Copyright © <a href="">作者qq：1234567</a>
-                <script>document.write(' - ' + (new Date()).getFullYear())</script> 爱学习
-            </p>
-        </div>
-        <!-- 客户端信息 -->    <div id="fps" style="z-index:5;position:fixed;bottom:3px;left:3px;color:#2196F3;font-size:10px;-webkit-pointer-events: none;    -moz-pointer-events: none;    -ms-pointer-events: none;    -o-pointer-events: none;"></div>
-    
-         
-         
-    </header>
-    <!--izitoast弹窗设置-->
-    <script>
-        iziToast.settings({
-            timeout: 4000,//调试
-            icon: 'Fontawesome',
-            closeOnEscape: 'true',
-            position: 'topRight',
-            transitionOut: 'fadeOutRight',
-            displayMode: '2',
-            layout: '2',
-            transitionIn: 'bounceInLeft',
-        });
-    </script>
-    <!--izitoast内容-->
-    <script>
-        function update() {
-            iziToast.info({
-                icon: 'fad fa-times-octagon',
-                backgroundColor: '#efefef',
-                title: '站点暂时关闭',
-                message: '只是出现了一点小问题 ~'
-            });
-        }
-    </script>
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/fetch.min.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
-    
-   
-    
+    <div class="ckam-main">
+
+        <!-- qq音乐播放器 左下角显示-->
+		   <meting-js server="tencent" 
+		   type="playlist" 
+		   id="9430287846" 
+		   fixed="true" 
+		   mini="true" 
+		   order="random" 
+		   loop="all"
+		   preload="auto" 
+		   list-folded="false" 
+		   autoplay="true" 
+		   volume="1"
+		   storageName='aplayer-setting'
+		   >
+		   </meting-js>
+
+
+
+
+        <!-- Main -->
+		<div class="ckam-left">
+			<div class="logo" style="background-image: url(./static/img/logo.png);">
+				<img style="position: absolute;top:-15%;left:-10%;width: 120%; aspect-ratio: 1/1;"
+					src="./static/img/logokuang.png">
+			</div>
+			<div class="left-div left-des">
+				<div class="left-des-item"><svg t="1705773709627" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1478"><path d="M512 249.976471c-99.388235 0-180.705882 81.317647-180.705882 180.705882s81.317647 180.705882 180.705882 180.705882 180.705882-81.317647 180.705882-180.705882-81.317647-180.705882-180.705882-180.705882z m0 301.17647c-66.258824 0-120.470588-54.211765-120.470588-120.470588s54.211765-120.470588 120.470588-120.470588 120.470588 54.211765 120.470588 120.470588-54.211765 120.470588-120.470588 120.470588z" p-id="1479"></path><path d="M512 39.152941c-216.847059 0-391.529412 174.682353-391.529412 391.529412 0 349.364706 391.529412 572.235294 391.529412 572.235294s391.529412-222.870588 391.529412-572.235294c0-216.847059-174.682353-391.529412-391.529412-391.529412z m0 891.482353C424.658824 873.411765 180.705882 686.682353 180.705882 430.682353c0-183.717647 147.576471-331.294118 331.294118-331.294118s331.294118 147.576471 331.294118 331.294118c0 256-243.952941 442.729412-331.294118 499.952941z" p-id="1480"></path></svg>China-Guilin
+				</div>
+				<div class="left-des-item"><svg t="1705773906032" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2474"><path d="M729.6 234.666667H294.4V157.866667a51.2 51.2 0 0 1 51.2-51.2h332.8a51.2 51.2 0 0 1 51.2 51.2v76.8z m179.2 51.2a51.2 51.2 0 0 1 51.2 51.2v512a51.2 51.2 0 0 1-51.2 51.2H115.2a51.2 51.2 0 0 1-51.2-51.2v-512a51.2 51.2 0 0 1 51.2-51.2h793.557333z m-768 172.032c0 16.384 13.312 29.696 29.696 29.696h683.008a29.696 29.696 0 1 0 0-59.392H170.410667a29.696 29.696 0 0 0-29.696 29.696z m252.416 118.784c0 16.384 13.312 29.696 29.696 29.696h178.176a29.696 29.696 0 1 0 0-59.392H422.912a29.738667 29.738667 0 0 0-29.696 29.696z" p-id="2475"></path></svg>匿名者组织</div>
+			</div>
+			<div class="left-div left-tag">
+				<div class="left-tag-item">网瘾
+				</div>
+				<div class="left-tag-item">程序员
+				</div>
+				<div class="left-tag-item">大三
+				</div>
+				<div class="left-tag-item">网络安全
+				</div>
+			</div>
+			<div class="left-div left-time">
+				<ul id="line">
+					<li>
+						<div class="focus"></div>
+						<div>敬请期待
+						</div>
+						<div>2025.2</div>
+					</li>
+					<li>
+						<div class="focus"></div>
+						<div>注册域名ckam.xyz
+						</div>
+						<div>2025.1.5</div>
+					</li>
+					<li>
+						<div class="focus"></div>
+						<div>搭建第一个博客</div>
+						<div>2024.8.5</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="ckam-right">
+			<header>
+				<div class="index-logo" style="background-image: url(./static/img/logo.png);">
+					<img style="position: absolute;top:-15%;left:-10%;width: 120%; aspect-ratio: 1/1;"
+						src="./static/img/logokuang.png">
+				</div>
+				<div class="welcome">
+					Hello I' m <span class="gradientText">
+						01CKam </span>
+				</div>
+		
+				<div class="description" style="color: rgb(86, 91, 96);">📝 Follow our own destinies</div>
+
+				<div class="iconContainer">
+					<a class="iconItem" onclick="" href="https://github.com/01CKam">
+						<i class="fa-brands fa-github"></i>
+						<div class="iconTip">Github</div>
+
+
+
+				    <a class="iconItem" onclick="" href="https://steamcommunity.com/profiles/76561199351747355/">
+						<i class="fa-brands fa-steam"></i>
+						<div class="iconTip">Steam</div>
+
+
+
+					
+			         <a class="iconItem" onclick="" href="https://y.qq.com/n/ryqq/playlist/7503460692">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7l0 72 0 264c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L448 147 192 223.8 192 432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6L128 200l0-72c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/></svg>
+						<div class="iconTip">QQ音乐</div>
+
+
+                  <!--             
+                    点击图标时触发pop函数显示图片。
+					href="javascript:void(0)"防止默认链接行为。-->
+					</a><a class="iconItem" onclick="pop('./static/img/qq.jpg')" href="javascript:void(0)">
+						<i class="fa-brands fa-qq"></i>					
+					<div class="iconTip">QQ</div>
+				    </a> 
+                    
+
+
+					<!-- 黑夜白天切换 -->
+					<!--  <a class="switch" href="javascript:void(0)">
+						<div class="onoffswitch">
+							<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
+								checked>
+							<label class="onoffswitch-label" for="myonoffswitch">
+								<span class="onoffswitch-inner"></span>
+								<span class="onoffswitch-switch"></span>
+							</label>
+						</div>
+					</a> -->
+
+				</div>
+
+				<div class="tanChiShe">
+					<img id="tanChiShe" src="./static/svg/snake-Light.svg" alt="">
+				</div>
+			</header>
+
+
+
+
+
+
+			<content>
+				<div class="title"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288l111.5 0L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7l-111.5 0L349.4 44.6z"/></svg>
+					site </div>
+				<div class="projectList"><a class="projectItem a" target="_blank" href="http://blog.ckam.xyz:2022">
+						<div class="projectItemLeft">
+							<h1>博客</h1>
+							<p>写在时间之内</p>
+						</div>
+						<div class="projectItemRight">
+							<img src="./static/img/i1.png"> 
+						</div>
+
+					<!-- </a><a class="projectItem a" target="_blank" href="https://i.ckam.cc">
+						<div class="projectItemLeft">
+							<h1>云盘</h1>
+							<p>存储收集文件</p>
+						</div>
+						<div class="projectItemRight">
+							<img src="./static/img/i2.png" alt="">
+						</div>
+
+					</a> -->
+					<a class="projectItem a" target="_blank" href="http://blog.ckam.xyz:2022/wz">
+						<div class="projectItemLeft">
+							<h1>文章</h1>
+							<p>随便写写</p>
+						</div>
+						<div class="projectItemRight">
+							<img src="./static/img/i7.webp" alt="">
+						</div>
+					</a>
+
+					<a class="projectItem a" target="_blank" href="#">
+						<div class="projectItemLeft">
+							<h1>实验室</h1>
+							<p>收集有趣html项目</p>
+						</div>
+						<div class="projectItemRight">
+							<img src="./static/img/i4.png" alt="">
+						</div>
+					</a>
+					
+			
+				</div> 
+
+					
+		 <div class="title"></div>
+				<!-- <div class="projectList"><a class="projectItem b" target="_blank" href="https://blog.ckam.net">
+						<div class="projectItemLeft">
+							<h1>博客</h1>
+							<p>记录摆烂日常</p>
+						</div>
+						<div class="projectItemRight">
+							<img src="./static/img/i1.png" alt="">
+						</div>
+
+					</a><a class="projectItem b" target="_blank" href="https://i.ckam.cc">
+						<div class="projectItemLeft">
+							<h1>云盘</h1>
+							<p>存储收集文件</p>
+						</div>
+						<div class="projectItemRight">
+							<img src="./static/img/i2.png" alt="">
+						</div>
+
+					</a>
+					<a class="projectItem b" target="_blank" href="https://ckam.cc">
+						<div class="projectItemLeft">
+							<h1>实验室</h1>
+							<p>收集有趣html作品</p>
+						</div>
+						<div class="projectItemRight">
+							<img src="./static/img/i4.png" alt="">
+						</div>
+
+					</a><a class="projectItem b" target="_blank" href="https://ckam.cc">
+						<div class="projectItemLeft">
+							<h1>实验室</h1>
+							<p>收集有趣html作品</p>
+						</div>
+						<div class="projectItemRight">
+							<img src="./static/img/i4.png" alt="">
+						</div>
+
+					</a></div>  -->
+			
+			
+				<div class="title"></div>
+			<!-- <div class="skill">
+					<img id="skillPc" src="./static/svg/skillPc.svg" alt="" srcset="">
+					<img id="skillWap" src="./static/svg/skillWap.svg" alt="" srcset="">
+				</div> -->
+		
+			</content>
+		</div>
+	</div>
+	<footer>
+		01CKam © 2025 |
+		<a href="https://beian.miit.gov.cn/">
+			桂ICP备1646594365号</a>
+	</footer>
+	<div class="tc">
+		<div onclick="" class="tc-main">
+			<img class="tc-img" src="" alt="" srcset="">
+		</div>
+
+	</div>
 </body>
+<!--Font图标-->
+<script src="https://kit.fontawesome.com/dc76a8cf74.js" crossorigin="anonymous"></script>
+<script src="./static/js/script.js"> </script>
 
-	
 
+
+
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({ id: "KFqltKSkJgQTGD9l", ck: "KFqltKSkJgQTGD9l" })</script>
 
 </html>
