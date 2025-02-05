@@ -2,233 +2,213 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-  <!-- Music -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
-  <!-- Music -->
-  <script type="text/javascript" src="/static/pixi.min.js"></script>
-  <script type="text/javascript" src="/static/main.js"></script>
-  <link rel="stylesheet" href="/static/font.css">
-  <!-- Font Awesome 6 Free CDN link -->
-  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <!-- 图标 -->
-  <link rel="icon" type="image/png" href="./img/yz.png">
-
-  <title></title>
-  <style>
-    canvas {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -2;
-      pointer-events: none
-    }
-
-    a:hover,
-    a:link,
-    a:visited,
-    a:active,
-    a:focus {
-      text-decoration: none;
-
-    }
-
-    button,
-    input,
-    input:focus {
-      outline: none;
-      border: none;
-
-    }
-
-    a,
-    button,
-    input {
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-
-    * {
-
-      -webkit-user-select: none;
-      /* Safari */
-      -moz-user-select: none;
-      /* Firefox */
-      -ms-user-select: none;
-      /* Internet Explorer/Edge */
-      user-select: none;
-      /* 其他浏览器 */
-    }
-
-    * {
-      box-sizing: border-box;
-      -webkit-text-size-adjust: none
-    }
-
-    img {
-      border: 0;
-      vertical-align: middle
-    }
-
-
-    body {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      width: 100vw;
-      background: radial-gradient(#619bff, #e0e0e3);
-    }
-
-    .main {
-      width: 35%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    @media screen and (max-width:1024px) {
-      .main {
-        width: 45%;
-      }
-    }
-
-    @media screen and (max-width:768px) {
-      .main {
-        width: 50%;
-      }
-    }
-
-    @media screen and (max-width:540px) {
-      .main {
-        width: 60% !important;
-      }
-    }
-
-    @media screen and (max-width:480px) {
-      .main {
-        width: 90% !important;
-      }
-    }
-
-    @media screen and (max-width:360px) {
-      .main {
-        width: 100% !important;
-      }
-    }
-
-
-    img {
-      border: 3px solid rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
-      box-shadow: 0 0px 20px 5px #e6e8ea;
-      transition: .4s ease-in-out;
-    }
-
-    h1 {
-
-      font-family: 'Noto Serif SC', serif;
-      color: #fff;
-      font-size: 1.8rem;
-      line-height: 2em;
-      font-weight: 800;
-    }
-
-    h2 {
-      margin: 0;
-      color: #ffffffa3;
-      padding-bottom: 45px;
-      font-size: 18px;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-      position: relative;
-      list-style-type: none;
-      display: -ms-inline-flexbox;
-      display: inline-flex;
-      width: 100%;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      border-bottom: 2px solid hsla(0, 0%, 100%, .1);
-      border-top: 2px solid hsla(0, 0%, 100%, .1);
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 85%
-    }
-
-    li {
-      display: flex;
-      transition: all .2s;
-      width: 100%;
-      border-left: 1px solid hsla(0, 0%, 100%, .1);
-      border-right: 1px solid hsla(0, 0%, 100%, .1);
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center
-    }
-
-    a {
-      font-size: 1.2rem;
-      color: #ffffff;
-      transition: all .2s;
-
-      cursor: pointer;
-    }
-
-    a:hover {
-      color: #fff !important;
-      text-shadow: 0 0px 20px #ffffff;
-    }
-  </style>
+    <!-- 基础信息 -->
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="force-rendering" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=peace>
+    <meta name="keywords" content="peace多,个人主页">
+    <meta name="author" content="peace多">
+    <title>个人主页</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+    <link rel="apple-touch-icon" href="./images/beijing.png">
+    <link rel="icon" href="./favicon.ico">
+    <!--引入SweetAlert
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+    <!--引入izitoast-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
+    <!--引入fontawesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css"
+        media="all">
+    <!--百度站长平台-->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?14e9f35ff8bc67fd4bcb5f07a6e6655a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!--IE淘汰计划-->
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href = "https://imsyy.top/upgrade-your-browser/index.html?referrer=" + encodeURIComponent(window.location.href);</script>
+    
+   
 </head>
 
-<body>
+<body oncontextmenu=self.event.returnValue=false onselectstart="return false">
+    <!--<span class="mobile btn-mobile-menu">
+        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
+        <i class="social iconfont icon-ngleup btn-mobile-close__icon hidden"></i>
+    </span>-->
+    <header id="panel" class="panel-cover">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                    <div class="ih-item circle effect right_to_left">
+                        <a class="blog-button">
+                            <div class="img"><img src="./images/logo.png" alt="img" class="js-avatar iUp profilepic">
+                            </div>
+                            <div class="info iUp">
+                                <div class="info-back">
+                                    <h2>Fighting</h2>
+                                    <p>2022 · 努力中</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <h1 class="panel-cover__title panel-title iUp">
+                        <br />hello
+                    </h1>
+                    <p class="panel-cover__subtitle panel-subtitle iUp">Welcome to my website</p>
+                    <hr class="panel-cover__divider iUp" />
+                    <!--一言无法显示时的文字-->
+                    <p id="description" class="panel-cover__description iUp">每一个人都应该明确自己的方向和位置
+                        <br />
+                        <strong>-「peace多」</strong>
+                    </p>
+                    <div class="navigation-wrapper iUp">
+                        <div>
+                            <nav class="cover-navigation cover-navigation--primary">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="https://www.46yun.com/" target="_blank" class="blog-button">
+                                            <div>46云服务器</div>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <!--<a onclick="update()" class="blog-button">-->
+                                        <a href="https://www.46yun.com/" target="_blank" class="blog-button">
+                                            <div>网盘</div>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="https://www.46yun.com/" target="_blank" class="blog-button">
+                                            <div>导航</div>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="https://www.46yun.com/" target="_blank" class="blog-button">
+                                            <div>战力查询</div>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="链接地址" class="blog-button">
+                                            <div>点击加群</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="iUp">
+                            <nav class="cover-navigation navigation--social">
+                                <ul class="navigation">
 
-
-  <div class="main">
-
-    <img src="./img/touxiang.jpg" width="130" height="130" alt="avatar">
-    <h1 style="color:#d95bec; font-family:STFangsong;">东南西巷</h1>
-    <h2 style="color:#1be955; font-family:STFangsong;">东隅已逝 桑榆非晚</h2>
-
-    <ul>
-      <li><a href="https://www.douyin.com/user/MS4wLjABAAAAO4GAOwDDl6jx2EYS8zwyKnmQvDYnK-AAs2i5VcxfUYM" title="关注我"><i
-            class="fa-brands fa-tiktok"></i> Tiktok</li>
-      <li><a href="http://wp.redstar.fun" title="个人博客"><i class="fa-regular fa-paper-plane"></i> Blog</a></li>
-      <li><a href="https://steamcommunity.com/profiles/76561199351747355/" title="一起嗨"><i
-            class="fa-brands fa-steam"></i> Steam</a></li>
-    </ul>
-
-    <meting-js server="netease" 
-    type="playlist" 
-    id="12318167109" 
-    fixed="true" 
-    mini="true" 
-    order="random" 
-    loop="all"
-    preload="auto" 
-    list-folded="false" 
-    autoplay="true" 
-    volume="1"
-    storageName='aplayer-setting'
-    >
-    </meting-js>
-
-  </div>
+                                    <li class="navigation__item">
+                                        <a href="" title="Github" target="_blank">
+                                            <i class="fas fa-code-branch"></i>
+                                            <span class="label">Github</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="/" title="Telegram" target="_blank">
+                                            <i class="fab fa-telegram-plane"></i>
+                                            <span class="label">Telegram</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="/" title="Twitter" target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                            <span class="label">Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="http://wpa.qq.com/msgrd?v=3&uin=123456&site=qq&menu=yes
+"title="QQ"
+                                            target="_blank">
+                                            <i class="fab fa-qq"></i>
+                                            <span class="label">QQ</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a onclick="weixin()" title="微信" target="_blank">
+                                            <i class="fab fa-weixin"></i>
+                                            <script>
+                                                function weixin() {
+                                                    Swal.fire({
+                                                        title: "请扫码",
+                                                        text: "请使用微信扫一扫",
+                                                        confirmButtonText: "好的",
+                                                        imageUrl: "./images/weixin.png",
+                                                        imageWidth: 150,
+                                                        imageHeight: 150
+                                                    })
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="/" title="Email">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="label">Email</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay cover-slate"></div>
+        </div>
+        <div class="remark iUp">
+            <p class="power">Copyright © <a href="">作者qq：1234567</a>
+                <script>document.write(' - ' + (new Date()).getFullYear())</script> 爱学习
+            </p>
+        </div>
+        <!-- 客户端信息 -->    <div id="fps" style="z-index:5;position:fixed;bottom:3px;left:3px;color:#2196F3;font-size:10px;-webkit-pointer-events: none;    -moz-pointer-events: none;    -ms-pointer-events: none;    -o-pointer-events: none;"></div>
+    
+         
+         
+    </header>
+    <!--izitoast弹窗设置-->
+    <script>
+        iziToast.settings({
+            timeout: 4000,//调试
+            icon: 'Fontawesome',
+            closeOnEscape: 'true',
+            position: 'topRight',
+            transitionOut: 'fadeOutRight',
+            displayMode: '2',
+            layout: '2',
+            transitionIn: 'bounceInLeft',
+        });
+    </script>
+    <!--izitoast内容-->
+    <script>
+        function update() {
+            iziToast.info({
+                icon: 'fad fa-times-octagon',
+                backgroundColor: '#efefef',
+                title: '站点暂时关闭',
+                message: '只是出现了一点小问题 ~'
+            });
+        }
+    </script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/fetch.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    
+   
+    
 </body>
+
+	
+
 
 </html>
